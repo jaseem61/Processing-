@@ -15,8 +15,11 @@ public class FourBalls extends PApplet {
 
     public static final int speedBall4=4;
 
+    private int positionBall1=0;
+    private int positionBall2=0;
+    private int positionBall3=0;
+    private int positionBall4=0;
 
-    private int startX=0;
 
     public static void main(String[] args) {
         PApplet.main("FourBalls",args);
@@ -36,11 +39,14 @@ public class FourBalls extends PApplet {
 
 
     private void drawFourBalls() {
-        ellipse(startX, gapY, DIAMETER,DIAMETER);
-        ellipse(startX*speedBall2,2* gapY, DIAMETER,DIAMETER);
-        ellipse(startX*speedBall3,  3* gapY, DIAMETER,DIAMETER);
-        ellipse(startX*speedBall4,4* gapY, DIAMETER,DIAMETER);
-        startX+=speedBall1;
+        ellipse(positionBall1, gapY, DIAMETER,DIAMETER);
+        ellipse(positionBall2,2* gapY, DIAMETER,DIAMETER);
+        ellipse(positionBall3,  3* gapY, DIAMETER,DIAMETER);
+        ellipse(positionBall4,4* gapY, DIAMETER,DIAMETER);
+        positionBall1+=speedBall1;
+        positionBall2+=speedBall2;
+        positionBall3+=speedBall3;
+        positionBall4+=speedBall4;
     }
 
 
